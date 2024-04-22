@@ -1,0 +1,59 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% load static %}
+{% block content %}
+<h1>Trần Thanh Vỹ</h1>
+<hr>
+{% comment %} <div class="card" style="width: 18rem;">
+  <img src='{% static "images/tuanpham.jpg" %}' class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Trần Thanh Vỹ</h5>
+    <p class="card-text">Stay real</p>
+    <a href="#" class="btn btn-primary">Book Him</a>
+  </div>
+</div> {% endcomment %}
+{% comment %} <a class="navbar-brand float-start" href="/"><img src='{% static "images/thanhvy.jpg" %}' class='responsive-img' style='max-height:200px'/></a> {% endcomment %}
+<div class='row'>
+    <div class='col-sm-15'>
+        
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Full Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Address</th>
+      <th scope="col">Phone Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Trần Thanh Vỹ</td>
+      <td>20</td>
+      <td>Quảng Nam</td>
+      <td>0865476494</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Lê Văn Minh Trí</td>
+      <td>20</td>
+      <td>Đà Nẵng</td>
+      <td>0987456123</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Nguyễn Hoàng Phúc</td>
+      <td>21</td>
+      <td>Đà Nẵng</td>
+      <td>08654789123</td>
+    </tr>
+  </tbody>
+</table>
+        
+    </div>
+</div>
+
+{% endblock  %}

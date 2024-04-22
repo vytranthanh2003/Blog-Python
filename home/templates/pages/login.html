@@ -1,0 +1,78 @@
+{% extends "pages/base.html" %}
+{% block title %}Sign in{% endblock %}
+<!DOCTYPE html>
+<html>
+
+  {% block content %}
+  
+  <body>
+    <center>
+      <div class="wrapper style1">
+        <div class="inner">
+          <section class="container box feature1">
+
+          
+            <h1 >Đăng nhập</h1>
+            
+            {% comment %} <form action="/login/" method="POST" class="box">
+              {% csrf_token %} {% for key, value in form.errors.items %} {{value}}
+              {%endfor %}
+              <div class="form-input">
+                <label class="col-form-label" type="text">Username:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                />
+              </div>
+              <div class="form-input">
+                <label class="col-form-label" type="password">Password:</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                />
+              </div>
+              <input type="hidden" name="next" value="/" />
+              <input type="submit" class="btn btn-success" value="Log In" />
+
+              <span>Or <a href="/register">Register</a></span>
+            </form> {% endcomment %}
+
+            <form action="/login/" method="POST" class="form-inline">
+              {% csrf_token %}
+              {% for key, value in form.errors.items %}
+                  {{ value }}
+              {% endfor %}
+          
+              <label for="email" class="sr-only">Email</label>
+              <input type="text" class="form-control mr-2" id="email" name="username" aria-describedby="emailHelp" placeholder="Email">
+                        
+              <label for="password" class="sr-only">Mật khẩu</label>
+              <input type="password" class="form-control mr-2" id="password" name="password" placeholder="Mật khẩu">
+          
+              
+          </form>
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Kiểm tra</label>
+              </div>
+              
+              <input type="hidden" name="next" value="/" />
+              <input type="submit" class="btn btn-success" value="Log In" />
+  
+  
+                <span>Or <a class="btn btn-primary" href="/Đăng ký">Đăng Ký</a></span>
+            </form>
+
+          </section>
+        </div>
+      </div>
+    </center>
+  </body>
+</html>
+
+{% endblock %}

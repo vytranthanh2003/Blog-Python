@@ -1,0 +1,23 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Register{% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  {% block content %}
+  <body>
+    <center>
+      <h1>Đăng ký</h1>
+      <hr>
+        <section class="container box feature1">
+          <form class="box" action='.' method='POST' class="box">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input class="btn btn-success" type='submit' value='Đăng ký'></input>
+          </form>
+        </section>
+    </center>
+  </body>
+  {% endblock content %}
+</html>

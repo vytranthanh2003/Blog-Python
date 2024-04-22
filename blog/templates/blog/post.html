@@ -1,0 +1,19 @@
+{% extends "pages/base.html" %}
+
+{% block title %}{{post.title}}{% endblock %}
+
+{% block content %}
+
+    <center>
+    <h3>{{post.date|date:'d/m/Y'}}
+        <a href='/blog/{{post.id}}'> | {{post.title}}</a>
+    </h3> <hr>
+    <h5> On {{post.date}}</h5>
+    <img src={{post.image.url}} alt="" style="height:200px; width:200px"/>
+    <button style="margin-top:0px"><a href={{post.image.url}} download={{post.image.url}} style="underLine:false">Download</a></button>
+    {{post.body|safe|linebreaks}}
+    <audio src={{post.audio.url}} controls></audio> <br>
+    <button><a href={{post.audio.url}} download={{post.audio.url}} style="underLine:false">Download</a></button>
+    </center>
+
+{% endblock %}

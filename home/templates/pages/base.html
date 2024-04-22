@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="utf-8" />
+    <link rel="icon" href="./vythanh.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=2" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href='{% static 'css/bootstrap.min.css' %}' type='text/css'>
+    <style>
+        html, body{
+            height: 100%;
+            background-color: #black;
+        }
+    </style>    
+    
+    <title>{% block title %}{% endblock %}</title>
+    
+  </head>
+    <body>
+<div  style='min-height: 95%; max-width: 100%'>
+            {% comment %} Nav Bar {% endcomment %}
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid" style='background-color:rgb(255, 0, 0); max-height:100px'>
+          <a class="navbar-brand" href="/"><img src='{% static "images/mom.jpg" %}' class='responsive-img' style='max-height:100px'/></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <div class="container-fluid" style='background-color:rgb(70, 90, 46); max-height:100px'>
+                <a class="navbar-brand" href="/"><img src='{% static "images/thanhvy.jpg" %}' class='responsive-img' style='max-height:100px'/></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="true" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarScroll">
+
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+
+              <li class="nav-item">
+                <a class="nav-link active" style='font-weight:bold; color:black' aria-current="page" href="/">Home</a>
+              </li>
+              
+             
+
+              <li class="nav-item">
+                <a class="nav-link" style='font-weight:bold; color:black' href="{% url 'contact' %}">Contact</a>
+              </li>
+
+            </ul>
+
+            <form class="d-flex" role="search">
+              <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            
+            <ul class="navbar-nav" style="--bs-scroll-height: 100px;">
+
+              <li class="nav-item">
+                <a class="nav-link" style='font-weight:bold; color:black' href="{% url 'login' %}">Đăng nhập</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" style='font-weight:bold; color:black' href="{% url 'register' %}">Đăng ký</a>
+              </li>
+
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+      <div class='container-fluid'>
+          {% block content %}{% endblock %}
+      </div>
+
+</div>
+
+    </body>
+
+    <footer>
+        <div class='container-fluid position-fixed'>
+            <a href='https://www.facebook.com/profile.php?id=100068766114113&mibextid=ZbWKwL' target="_blank">Facebook</a> |
+            <a href='https://www.youtube.com/@UchihaShisui123' target="_blank">Youtube</a> |
+            <a href='https://www.tiktok.com/@tranthanhvu2002?_t=8lROAb2vGEi&_r=1' target="_blank">TikTok</a>
+        </div>
+    </footer>
+    
+</html>
